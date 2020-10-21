@@ -1,0 +1,368 @@
+/* custom bootstrap */
+$primary: #6610f2;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": white
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* custom styles */
+$open: 'Open Sans', sans-serif;
+$serif: 'Playfair Display', serif;
+$font-primary: #14062b;
+$font-secondary: #635b6e;
+
+@mixin centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin title {
+    .text {
+        h1  {
+            color: $font-primary;
+        }
+
+        h5 {
+            color: $font-primary
+        }
+
+        p {
+            font-family: $open;
+            color: $font-secondary;
+        }
+    } 
+}
+
+@mixin owlNav {
+    .owl-nav {
+        margin-top: 1rem;
+        margin-left: 2rem;
+
+        button {
+            margin-right: 0.5rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            padding: 0 1rem 0.2rem 1rem !important;
+            border: 1px solid $font-primary;
+            transition: .2s;
+            
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                color: white;
+                background-color: $font-primary;
+            }
+        }
+
+        .disabled {
+            color: white;
+            background-color: $font-primary;
+        }
+    }    
+}
+
+@mixin overlay {
+    .overlay {
+        font-size: 1.3rem;
+        position: absolute;
+        font-weight: 600;
+        bottom: -6.9%;
+        left: 0;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgba(21, 21, 22,.5) 0%, rgba(21, 21, 22,.1) 49%, rgba(21, 21, 22, .1) 78%, rgba(21, 21, 22,0) 100%);
+        width: 100%;
+        opacity: 0;
+        color: white;
+        padding-bottom: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        opacity: 1;    
+    }
+
+    .overlay-special {
+        font-size: 1.3rem;
+        font-weight: 600;
+        position: absolute;
+        bottom: -3.1%;
+        left: 0;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgba(21, 21, 22,.5) 0%, rgba(21, 21, 22,.1) 49%, rgba(21, 21, 22, .1) 78%, rgba(21, 21, 22,0) 100%);
+        width: 100%;
+        opacity: 0;
+        color: white;
+        padding-bottom: 1.5rem;
+        text-align: center;
+        cursor: pointer;
+        opacity: 1; 
+    }
+}
+
+body {
+    font-family: $serif;
+    background-color: rgb(250, 248, 252);
+    background: rgb(239,241,245);
+    background: linear-gradient(90deg, rgba(239,241,245,1) 0%, rgba(252,251,253,1) 35%, rgba(252,251,253,1) 100%);
+}
+
+nav {
+    color: $font-primary;
+    font-family: $open;
+
+    .highlight {
+        color: rgb(96, 52, 255);    
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+        text-transform: uppercase;
+    }
+
+    .navbar-brand {
+        font-family: $serif;
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+}
+
+.header {
+    background-image: url('../assets/img/header-img.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 75vh;
+    color: white;
+    position: relative;
+    text-align: center;
+
+    .header-text { 
+        @include centered;
+        
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            white-space: nowrap;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 300;
+            font-family: $open;
+        }
+    }
+
+    .book-card {
+        color: $font-primary;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);  
+
+        .book-body {
+            padding: 2rem 2rem 2.5rem 2rem !important;
+            text-align: center;
+
+            select {           
+                display: block;
+                padding: 0.5rem;
+                border: none;
+                border-bottom: 1px solid #0f0320;
+                font-weight: 500;
+            }
+
+            label {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                font-family: $open;
+                color: $font-secondary;
+            }
+        }
+
+        .book-btn {
+            font-size: 1.1rem;
+            position: relative;
+            background-color: $primary;
+            transition: .2s;
+            cursor: pointer;
+
+            .book-center { 
+                @include centered;
+                
+                .arrow {
+                    font-size: 1.5rem;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: 600;
+            }
+
+            &:hover {
+                background-color: #5b0ed6;
+            }
+        }
+    }
+    
+}
+
+
+.package {
+    margin-top: 12rem;
+    @include title;
+
+    .country-list {
+
+        .wrap {
+            position: relative;
+            transition: .3;
+            @include overlay;
+
+        }
+        
+        @include owlNav;
+        
+    }
+}
+
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%; 
+
+    .wrap {
+        position: relative;
+
+        @include overlay;
+    }
+
+}
+    
+    @media (max-width: 450px) {
+        .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+
+            .wrap {
+                position: relative;
+
+                @include overlay;
+
+            }
+
+        }
+
+    }
+    
+
+.room {
+    margin-top: 6rem;
+    @include title;
+}
+
+.feedback {
+    margin-top: 8rem;
+    @include title;
+
+    .owl-carousel {
+        @include owlNav;
+    }
+    
+    .card {
+        @include title;
+    }
+}
+
+footer {
+    position: relative;
+    margin-top: 8rem;
+    background-image: url(../assets/img/mountain-footer.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 47vh;
+    
+    h1 {
+        margin-top: 5rem !important;
+    }
+
+    .fixed-bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+
+        span {
+            color: $primary;
+        }
+
+        img {
+            width: 22px;
+        }
+
+        a {
+            color: $font-primary;
+            text-decoration: none;
+            font-weight: 600;
+            font-family: $open;
+            text-transform: uppercase;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+   
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .content {
+        background-image: url(../assets/img/mountain.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}

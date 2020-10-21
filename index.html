@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Dreamcation - Visit your dream place.</title>
+    <!--styles-->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="scss/custom.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+            <a class="navbar-brand ml-2" href="#"><span class="highlight">Dream</span>cation</a>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link mx-3 " href="#">Features</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link ml-3" href="#">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="header container-fluid">
+        <div class="header-text">
+            <h1>Your journey starts here.</h1>
+            <p class="mt-3">Find your dream place and start exploring the world.</p>
+        </div>
+
+        <div class="book-card bg-white d-flex shadow">
+            <div class="book">
+                <div class="book-body d-flex">
+                    <div class="data mr-4">
+                        <label for="country" class="mb-1">Country</label>
+                        <select name="country" id="country">
+                            <option value="Japan">Japan</option>
+                            <option value="Jakarta">Jakarta</option>
+                        </select>
+                    </div>
+                    <div class="data mr-4">
+                        <label for="destinations" class="mb-1">Destinations</label>
+                        <select name="destinations" id="destinations">
+                            <option value="Akihabara">Akihabara</option>
+                            <option value="Monas">Monas</option>
+                        </select>
+                    </div>
+                    <div class="data mr-4">
+                        <label for="checkin" class="mb-1">Check In</label>
+                        <select name="checkin" id="checkin">
+                            <option value="Akihabara">Tue,28 May 2020</option>
+                            <option value="Monas">Mon, 15 Jan 2018</option>
+                        </select>
+                    </div>
+                    <div class="data">
+                        <label for="checkout" class="mb-1">Check Out</label>
+                        <select name="checkout" id="checkout">
+                            <option value="Akihabara">Sat, 1 Jun 2020</option>
+                            <option value="Monas">Wed, 17 Jan 2018</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="book-btn p-5">
+                <span class="book-center">
+                    <a href="#">Book Now <span class="arrow">&#8594;</span></a>   
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid content">
+
+        <div class="container">
+            <div class="row package">
+                <div class="col-md-5">
+                    <div class="text mt-5">
+                        <h1>Trip Package</h1>
+                        <p class="mt-4 mb-5">Discover some of the best trip packages in each country that suites you. Let's just make your trip a little bit more organized.</p>
+                        <button class="btn btn-primary btn-lg rounded-0">View All Trip Packages</button>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="owl-carousel owl-theme country-list">
+                        <div class="mr-4">
+                            <div class="wrap">
+                                <img src="assets/img/japan.jpg" alt="japan">
+                                <p class="overlay">Japan</p>
+                            </div>
+                        </div>
+                        <div class="mr-4">
+                            <div class="wrap">
+                                <img src="assets/img/hongkong.jpg" alt="hongkong">
+                                <p class="overlay">Hongkong</p>
+                            </div>
+                        </div>
+                        <div class="mr-4">
+                            <div class="wrap">
+                                <img src="assets/img/newyork.jpg" alt="newyork">
+                                <p class="overlay">New York</p>
+                            </div>
+                        </div>
+                        <div class="mr-4">
+                            <div class="wrap">
+                                <img src="assets/img/singapore.jpg" alt="singapore">
+                                <p class="overlay">Singapore</p>
+                            </div>
+                        </div>
+                        <div class="mr-4">
+                            <div class="wrap">
+                                <img src="assets/img/london.jpg" alt="london">
+                                <p class="overlay">London</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="row room">
+                <div class="col">
+                    <div class="row text">
+                        <h1>Room & Suites</h1>
+                        <p class="mb-5 mt-4">Pick a room that suites your taste and your wallet.</p>
+                    </div>
+                    <div class="gallery" id="gallery">
+                        <div class="mb-3 wrap">
+                          <img class="img-fluid" src="assets/img/bed1.jpg" alt="Card image cap">
+                          <p class="overlay-special">Special Room</p>
+                        </div>
+                        <div class="mb-3 wrap">
+                          <img class="img-fluid" src="assets/img/bed2.jpg" alt="Card image cap">
+                          <p class="overlay">Thailand Style</p>
+                        </div>                      
+                        <div class="mb-3 wrap">
+                          <img class="img-fluid" src="assets/img/bed3.jpg" alt="Card image cap">
+                          <p class="overlay">Deluxe Room</p>
+                        </div>
+                        <div class="mb-3 wrap">
+                          <img class="img-fluid" src="assets/img/bed4.jpg" alt="Card image cap">
+                          <p class="overlay">Premium Room</p>
+                        </div>                    
+                        <div class="mb-3 wrap">
+                          <img class="img-fluid" src="assets/img/bed5.jpg" alt="Card image cap">
+                          <p class="overlay">Single Room</p>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="row feedback">
+                <div class="text">
+                    <h1>Our happy clients</h1>
+                    <p class="mb-4 mt-4">Some good feedback from our lovely clients.</p>
+                </div>
+                <div class="owl-carousel owl-theme">
+                        <div class="card p-3 mr-4">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="assets/img/person1.jpg" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body text">
+                                  <h5 class="card-title">Walter White</h5>
+                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, ratione.</p>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="card p-3 mr-4">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="assets/img/person2.jpg" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body text">
+                                  <h5 class="card-title">Udin Lorem</h5>
+                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, ratione.</p>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+          
+                        <div class="card p-3 mr-4">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="assets/img/person3.jpg" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body text">
+                                  <h5 class="card-title">Jesse Pinkman</h5>
+                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, ratione.</p>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+          
+
+                        <div class="card p-3">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="assets/img/person4.jpg" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body text">
+                                  <h5 class="card-title">Martha Nielsen</h5>
+                                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, ratione.</p>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <footer>
+              <div class="row text-center justify-content-center">
+                  <h1 class="mb-5">Subscribe to Our Newsletter</h1>
+                  <div class="input-group" style="width: 40rem;">
+                    <input type="text" class="form-control p-3 mx-auto" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <button class="input-group-text btn btn-primary px-4" id="basic-addon2">Subscribe</button>
+                  </div>
+              </div>
+              <div class="row fixed-bottom pb-2">
+                <div class="col">
+                    <h4><span>Dream</span>cation</h4>
+                </div>
+                <div class="col">
+                    <a href="#" class="mr-4">Home</a>
+                    <a href="#" class="mr-4">Features</a>
+                    <a href="#" class="mr-4">Pricing</a>
+                    <a href="#">About</a>
+                </div>
+                <div class="col">
+                    <a href="#"><img src="assets/img/instagram.png" alt=""></a>
+                    <a href="#"><img src="assets/img/twitter.png" class="mx-3" alt=""></a>
+                    <a href="#"><img src="assets/img/facebook.png" alt=""></a>
+                </div>
+              </div>      
+        </footer>
+    </div>
+
+      	
+
+    <!--scripts-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                nav: true,
+
+            });
+        });
+    </script>
+</body>
+</html>

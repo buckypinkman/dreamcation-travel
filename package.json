@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.0.0-alpha2",
+    "owl.carousel": "^2.3.4"
+  }
+}
